@@ -22,12 +22,15 @@ A modern, interactive portfolio website showcasing my work as a Computer Science
 ## Sections
 
 1. **Projects**
-   - SylCampus
-   - LLM Fine-Tuning Toolkit
-   - Academic Analytics Dashboard
+   - Syl
+   - Resume Analyzer
+   - Smart Habit Tracker
+   - Spotify Data Analysis
+   - Interactive Porfolio Website
+   - AI-Powered Checkout Optimization System
 
 2. **Entrepreneurship**
-   - SylCampus founding story
+   - Syl founding story
    - Growth strategy
    - Accelerator experience
 
