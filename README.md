@@ -37,7 +37,6 @@ Feel free to reach out to me through any of these channels:
 - 📧 Email: [zayn7705@gmail.com](mailto:zayn7705@gmail.com)
 - 💼 LinkedIn: [Zayn Ullah](https://www.linkedin.com/in/zaynullah)
 - 👨‍💻 GitHub: [zayn7705](https://github.com/zayn7705)
-- 🌐 Website: [SylCampus.com](https://sylcampus.com)
 
 ## License
 
