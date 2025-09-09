@@ -182,6 +182,10 @@
                         <a href="#entrepreneurship" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Entrepreneurship</a>
                         <a href="#skills" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
                         <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        <a href="Zayn_Portfolio_Resume.pdf" target="_blank" class="nav-link text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            <i class="fas fa-file-pdf text-red-400 mr-2"></i>
+                            Resume
+                        </a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -201,6 +205,10 @@
                 <a href="#entrepreneurship" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Entrepreneurship</a>
                 <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Skills</a>
                 <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Contact</a>
+                <a href="Zayn_Portfolio_Resume.pdf" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 flex items-center">
+                    <i class="fas fa-file-pdf text-red-400 mr-2"></i>
+                    Resume
+                </a>
             </div>
         </div>
     </nav>
@@ -684,47 +692,13 @@
                     <span class="gradient-text">Get In Touch</span>
                 </h2>
                 <p class="text-lg text-gray-400 max-w-3xl mx-auto">
-                    Interested in collaborating or learning more? Reach out below.
+                    Interested in collaborating or learning more? Connect with me through the links below.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
                     <div class="card rounded-xl p-8">
-                        <h3 class="text-2xl font-bold text-white mb-6">Contact Form</h3>
-                        <form id="contact-form" action="https://formspree.io/f/mgvkndqy" method="POST" class="space-y-6">
-                            <div class="mb-6">
-                                <label for="name" class="block text-gray-400 mb-2">Name</label>
-                                <input type="text" id="name" name="name" required class="contact-input w-full px-4 py-3 rounded-lg" placeholder="Your name">
-                            </div>
-                            <div class="mb-6">
-                                <label for="email" class="block text-gray-400 mb-2">Email</label>
-                                <input type="email" id="email" name="email" required class="contact-input w-full px-4 py-3 rounded-lg" placeholder="your.email@example.com">
-                            </div>
-                            <div class="mb-6">
-                                <label for="subject" class="block text-gray-400 mb-2">Subject</label>
-                                <select id="subject" name="subject" required class="contact-input w-full px-4 py-3 rounded-lg">
-                                    <option value="">Select a subject</option>
-                                    <option value="collaboration">Project Collaboration</option>
-                                    <option value="opportunity">Job Opportunity</option>
-                                    <option value="question">Question</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="mb-6">
-                                <label for="message" class="block text-gray-400 mb-2">Message</label>
-                                <textarea id="message" name="message" required rows="5" class="contact-input w-full px-4 py-3 rounded-lg" placeholder="Your message..."></textarea>
-                            </div>
-                            <div id="form-status" class="hidden mb-4 text-center"></div>
-                            <button type="submit" id="submit-button" class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium py-3 px-6 rounded-lg hover:opacity-90 transition-all">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                
-                <div>
-                    <div class="card rounded-xl p-8 mb-8">
                         <h3 class="text-2xl font-bold text-white mb-6">Connect With Me</h3>
                         <div class="space-y-4">
                             <a href="https://www.linkedin.com/in/zaynullah" target="_blank" class="flex items-center text-gray-400 hover:text-white">
@@ -753,7 +727,9 @@
                             </a>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div>
                     <div class="card rounded-xl p-8">
                         <h3 class="text-2xl font-bold text-white mb-6">Current Availability</h3>
                         <div class="flex items-center mb-4">
@@ -892,49 +868,6 @@
             });
         });
 
-        // Contact form submission
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const submitButton = document.getElementById('submit-button');
-            const formStatus = document.getElementById('form-status');
-            
-            try {
-                // Disable submit button and show loading state
-                submitButton.disabled = true;
-                submitButton.innerHTML = 'Sending...';
-                formStatus.className = 'hidden';
-                
-                // Submit the form
-                const formData = new FormData(this);
-                const response = await fetch(this.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Show success message
-                    formStatus.className = 'text-green-400 mb-4 text-center';
-                    formStatus.textContent = 'Message sent successfully!';
-                    this.reset();
-                } else {
-                    // Show error message
-                    formStatus.className = 'text-red-400 mb-4 text-center';
-                    formStatus.textContent = 'Failed to send message. Please try again.';
-                }
-            } catch (error) {
-                // Show error message
-                formStatus.className = 'text-red-400 mb-4 text-center';
-                formStatus.textContent = 'An error occurred. Please try again later.';
-            } finally {
-                // Re-enable submit button
-                submitButton.disabled = false;
-                submitButton.innerHTML = 'Send Message';
-            }
-        });
 
         // Parallax effect
         window.addEventListener('scroll', function() {
